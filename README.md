@@ -36,13 +36,17 @@ See task_design.pdf for details on the design of each task.
 
 ## Get this repo and ready to use
 
-Download [Git](https://git-scm.com/downloads) and use the git bash to clone this repository (and all tasks sub-repos) with:
+1. Download [Git](https://git-scm.com/downloads) and use the git bash to clone this repository (and all tasks sub-repos) with:
 
 ```bash
   git clone --recursive https://github.com/fattorilab/vr-navigation-tasks.git
 ```
 
-If the repository of a task is modified, use the following to propagate the latest changes to this super repository:
+2. Open the [Unity Hub](https://unity.com/download), add a project task (e.g. Trial_Structure_free_choice_Task) e wait for Unity to setup and open the project.
+
+3. Set up all the relevant parameters (e.g. length of reward) and options (e.g. target dispositions) from the Unity Editor.
+
+To propagate the latest changes of a given task project to this super repository:
 
 ```bash
 # Navigate to the sub-repository related to modified task
@@ -67,4 +71,4 @@ git push origin main
 
 ## Documentation
 
-Since each task share a standard structure, a general [documentation](https://linktodocumentation) is provided for the C# scripts managing the and supporting data saving, video recording and interface with the experimental setup (e.g. joystick).
+Since each task share a standard structure, a general [documentation](https://linktodocumentation) is provided for the C# scripts managing and supporting data saving, video recording and interfacing with the experimental setup (e.g. arduino, Pupil Lab).
