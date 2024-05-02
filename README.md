@@ -46,6 +46,9 @@ See task_design.pdf for details on the design of each task.
 
 3. Set up all the relevant parameters (e.g. length of reward) and options (e.g. target dispositions) from the Unity Editor.
 
+4. Press the start icon ![Alt text]()
+
+
 To propagate the latest changes of a given task project to this super repository:
 
 ```bash
