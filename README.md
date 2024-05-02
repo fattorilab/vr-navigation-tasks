@@ -1,10 +1,8 @@
 # vr-navigation-tasks
 
-Super repository containg all VR tasks developed for testing navigational abilities, and the relative documentation.
+Super repository containg all VR tasks, and the relative documentation.
 
-### UNITY NAVIGATION TASKS
-
-Virtual Reality (VR) tasks built to test 3D goal-directed navigation. The tasks projects are built and run on Unity (version: 2022.3.20f1).
+It contains Virtual Reality (VR) tasks built to test 3D goal-directed navigation. The tasks projects are built and run on Unity (version: 2022.3.20f1).
 Each project is a state-machine (thereby, the logic is coherent) and represents a different task.
 
 These VR projects expects:
