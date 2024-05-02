@@ -1,0 +1,15 @@
+[submodule "Fixation_3D_Task"]
+	path = Fixation_3D_Task
+	url = https://github.com/fattorilab/Fixation_3D_Task.git
+[submodule "Trial_Structure_free_choice_Task"]
+	path = Trial_Structure_free_choice_Task
+	url = https://github.com/fattorilab/Trial_Structure_free_choice_Task.git
+[submodule "Trial_Structure_given_target_Task"]
+	path = Trial_Structure_given_target_Task
+	url = https://github.com/fattorilab/Trial_Structure_given_target_Task.git
+[submodule "Trial_Structure_many_obstacles_Task"]
+	path = Trial_Structure_many_obstacles_Task
+	url = https://github.com/fattorilab/Trial_Structure_many_obstacles_Task.git
+[submodule "Trial_Structure_many_obstacles_eatAll_Task"]
+	path = Trial_Structure_many_obstacles_eatAll_Task
+	url = https://github.com/fattorilab/Trial_Structure_many_obstacles_eatAll_Task.git
