@@ -24,9 +24,7 @@ Per each session, a set of files are given in output:
 - recorded screen videos + videos timestamps;
 - frame data, including player movement data, eye data, etc;
 - objects data, including timestamp of appearance/disappearance.
-
-See [Documentation](https://linktodocumentation) (in particular, at [Saver](https://linktodocumentation)) for the output files nomenclature.
-
+- 
 At present, the available tasks are:
 
 - [Fixation task](https://github.com/fattorilab/Fixation_3D_Task);
@@ -36,3 +34,15 @@ At present, the available tasks are:
 - Trial structure task - [Many obstacles eat all](https://github.com/fattorilab/Trial_Structure_many_obstacles_eatAll_Task);
 
 See task_design.pdf for details on the design of each task.
+
+## Documentation
+
+Since each task share a standard structure, a general [documentation](https://linktodocumentation) is provided for the C# scripts managing the and supporting data saving, video recording and interface with the experimental setup (e.g. joystick).
+
+## Update submodules
+
+If the repository of a task is modified, use the following to pull the latest changes in this super repository:
+
+```bash
+  git submodule update --remote
+```
