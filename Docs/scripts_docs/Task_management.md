@@ -14,7 +14,11 @@ Implements the task as a state-machine, with a standard structure:
 - state +99: Reward, end of trial.
 - state -99: Error, end of trial.
 
+Upon the start of the session (first frame, before state -2), it activates the neural recording by OpenEphys. 
+Upon the end of the session (application quit), it stops the neural recording.
+
 Acting as a main controller, it allows the customization of the task (e.g length of reward; epochs duration, disposition of the targets, etc), and tracking of the session (N° trials, current state, total conditions). On every update (and thereby frame), all the relevant info is passed on to the [Saver](./Data_saving.md#Saver) for saving. 
+
 
 <details>
 
@@ -187,7 +191,11 @@ This script does NOT instantiate any other element of the scene (for that, check
 
 Check the regions `Methods`, and `Targets` (inside it) to find the code blocks that manage the instantiations (also, the region `Scene and Obstacles` for the tasks with obstacles)
 
-
+**MainTask depends on**: ----->     ADD LINKS TO EACH SCRIPT
+- Movement.cs - to check if the participant is moving or static, to check if the participant collided with an object;
+- RequestController.cs - to check if the connection is active;
+- PupilDataStream.cs - to check if the connection is active;
+- Saver.cs - to save objects data.
 
 ### Movement
 
