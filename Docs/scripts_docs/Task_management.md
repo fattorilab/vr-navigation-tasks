@@ -18,7 +18,7 @@ Acting as a main controller, it allows the customization of the task (e.g length
 
 <details>
 
-<summary> Inspect list of variables </summary>
+<summary> Inspect list of variables (free choice task, for exemplary purposes) </summary>
 
 
 **Mind that** only public fields can be customized in the Editor and are saved in the database session-specific entry.
