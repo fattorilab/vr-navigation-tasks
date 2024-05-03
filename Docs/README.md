@@ -1,25 +1,25 @@
 
 # Documentation
 
-Here is provided a basic Documentation for the project scripts.
+Here is provided a basic Documentation for the project scripts
 
-[Task management](Task_management.md): 
+[Task management](scripts_docs/Task_management.md): 
 - MainTask;
 - Movement;
 
-[Data saving](Data_saving.md): 
+[Data saving](scripts_docs/Data_saving.md): 
 - Saver;
 - Database scripts;
 
-[Video recording](Video_recording.md):
+[Video recording](scripts_docs/Video_recording.md):
 - ffMPEG modified scripts;
 
-[Connection to experimental setup](Connection_to_setup.md):
+[Connection to experimental setup](scripts_docs/Connection_to_setup.md):
 - Arduino
 - Ardu;
 - Pupil Lab related scripts;
 
-[Scene creation](Scene_creation.md):
+[Scene creation](scripts_docs/Scene_creation.md):
 - Ground;
 - Createtargetsandtrees;
 - Rocks;
