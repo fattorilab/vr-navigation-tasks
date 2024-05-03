@@ -6,14 +6,20 @@ For the general list: [beam me up, Scotty!](../README.md)
 
 ### MainTask
 
-Allows to customize the task (e.g length of reward; epochs duration, disposition of the targets, etc).
+Implements the task as a state-machine, with a standard structure:
+- state -2 PRETRIAL: where connections to Arduino and Pupil Labs recording are checked, visited only once after the first frame;
+- state -1 INTERTRIAL: phase between trials (i.e. after start, it only follows an error/reward), depicts a black rectangular marker at the center of the camera for the purpose of syncing the videos and the Unity timestamps;
+- state 0 BASELINE: where the trial is prepared, in particular the condition for the current trial is choosen (for condition-based tasks);
+- state 1 to N: the sequence of states that follows depends on the specific task and can vary (see tasks_design.pdf for more details).
+- state +99: Reward, end of trial.
+- state -99: Error, end of trial.
 
-Tracks 
-Instantiate targets (and obstacles, where the task requires), and shows/hides
+Acting as a main controller, it allows the customization of the task (e.g length of reward; epochs duration, disposition of the targets, etc), and tracking of the session (N° trials, current state, total conditions). On every update (and thereby frame), all the relevant info is passed on to the [Saver](./Data_saving.md#Saver) for saving. 
 
 <details>
 
 <summary> Inspect list of variables </summary>
+
 
 **Mind that** only public fields can be customized in the Editor and are saved in the database session-specific entry.
 Some fields are non-serialized so that they are not included in Json structure that is saved in the database (see [Saver](./Data_saving.md#Saver)).
@@ -175,4 +181,16 @@ Some fields are non-serialized so that they are not included in Json structure t
 
 </details>
 
+Moreover, this script instantiates the targets (and obstacles, where the task requires) starting from a CSV file of positions (x, y, z), and shows/hides them according to the design of the task. It also instantiates the black marker that appears/disappears within the state -1 INTERTRIAL.
+Similarly to frame-by-frame data, objects data is recorded as well. In this case, the MainTask uses a Saver method (i.e. `AddObjectEnd()`) to save info, including position, time of appearance and disappearance (not referring to instantiation, but proper visibility to the participant) of the object.
+This script does NOT instantiate any other element of the scene (for that, check [scene creation](./Scene_creation.md)).
+
+Check the regions `Methods`, and `Targets` (inside it) to find the code blocks that manage the instantiations (also, the region `Scene and Obstacles` for the tasks with obstacles)
+
+
+
 ### Movement
+
+
+
+
