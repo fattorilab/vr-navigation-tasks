@@ -199,6 +199,59 @@ Check the regions `Methods`, and `Targets` (inside it) to find the code blocks t
 
 ### Movement
 
+Controls the movement of the player, and its collision 
+It receives joystick coordinates' data (x, y) from [Ardu](https://github.com/fattorilab/vr-navigation-tasks/blob/main/Docs/scripts_docs/Connection_to_setup.md#ardu) and moves the player accordingly, that is linearly for forward/backward shifts (+/- Y axis) and rotationally for lateral shifts (+/- X axis). If Arduino is not working, or the joystick is missing, it is possible to play with the arrow keys of the keyboard.
 
+This script also manages collisions with GameObjects, i.e. records/resets a collision, and the time of contact.
 
+Finally, it allows restriction of movement in a given direction (e.g. to make the player static at one state or another), as well as inversion of the axes.
+
+<details>
+
+<summary> Inspect list of variables (free choice task, for exemplary purposes) </summary>
+
+```c#
+    #region Variables Declaration
+
+    // Time vars
+    public float presstime = 0;
+    float lastTimeStatic;
+    public float speed;
+
+    // Movement vars
+    Vector3 CamPosition;
+    Vector3 CamRotation;
+    float arduX = 0;
+    float arduY = 0;
+
+    // Control movement vars
+    public float restrict_horizontal = 1;
+    public float restrict_backwards = 1;
+    public float restrict_forwards = 1;
+    [System.NonSerialized] public bool keypressed = false;
+    
+    // Axes inversion
+    public bool reverse_Xaxis;
+    public bool reverse_Yaxis;
+    int x_inversion = 1;
+    int y_inversion = 1;
+
+    // GameObjects
+    GameObject experiment;
+    Rigidbody rb;
+    GameObject target;
+
+    // Collisions
+    [System.NonSerialized] public bool HasCollided = false;
+    [System.NonSerialized] public float CollisionTime = 0f;
+    [System.NonSerialized] public GameObject CollidedObject;
+    private Vector3 lastPosition;
+
+    #endregion
+```
+
+<details>
+
+**Movement depends on**:
+- Ardu.cs - to receive joystick data;
 
