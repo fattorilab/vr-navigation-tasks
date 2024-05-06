@@ -4,7 +4,7 @@ The following scripts manage the parameters and options of the task, the behavio
 
 For the general list: [beam me up, Scotty!](../README.md)
 
-### MainTask
+### MainTask.cs
 
 Implements the task as a state-machine, with a standard structure:
 - state -2 PRETRIAL: where connections to Arduino and Pupil Labs recording are checked, visited only once after the first frame;
@@ -197,7 +197,7 @@ Check the regions `Methods`, and `Targets` (inside it) to find the code blocks t
 - PupilDataStream.cs - to check if the connection with the eye recorder is active;
 - Saver.cs - to save data of objects at the time of appearance/disappearance.
 
-### Movement
+### Movement.cs
 
 Controls the movement of the player, and its collision 
 It receives joystick coordinates' data (x, y) from [Ardu](https://github.com/fattorilab/vr-navigation-tasks/blob/main/Docs/scripts_docs/Connection_to_setup.md#ardu) and moves the player accordingly, that is linearly for forward/backward shifts (+/- Y axis) and rotationally for lateral shifts (+/- X axis). If Arduino is not working, or the joystick is missing, it is possible to play with the arrow keys of the keyboard.
