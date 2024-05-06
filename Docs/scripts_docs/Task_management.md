@@ -191,11 +191,11 @@ This script does NOT instantiate any other element of the scene (for that, check
 
 Check the regions `Methods`, and `Targets` (inside it) to find the code blocks that manage the instantiations (also, the region `Scene and Obstacles` for the tasks with obstacles)
 
-**MainTask depends on**: ----->     ADD LINKS TO EACH SCRIPT
-- Movement.cs - to check if the participant is moving or static, to check if the participant collided with an object;
-- RequestController.cs - to check if the connection is active;
-- PupilDataStream.cs - to check if the connection is active;
-- Saver.cs - to save objects data.
+**MainTask depends on**:
+- Movement.cs - to check if the participant is moving or static (e.g `isMoving`), to check if the participant collided with an object (e.g. `hasCollided`);
+- RequestController.cs - to check if the connection with Arduino is active;
+- PupilDataStream.cs - to check if the connection with the eye recorder is active;
+- Saver.cs - to save data of objects at the time of appearance/disappearance.
 
 ### Movement
 
