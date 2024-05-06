@@ -2,6 +2,8 @@
 
 The following scripts manage the connection and communication with Arduino (that interfaces Unity with the joystick, the reward delivery system and OpenEphys neural recorder) and with Pupil Labs eye recorder.
 
+For the general list: [beam me up, Scotty!](../README.md)
+
 ### arduino.cs
 
 Contains methods to:
