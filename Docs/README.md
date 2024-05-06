@@ -12,7 +12,7 @@ Here is provided a basic Documentation for the project scripts
 - InteractWithDB;
 
 [Video recording](scripts_docs/Video_recording.md):
-- ffMPEG modified scripts;
+- FFmpegOUT modified scripts;
 
 [Connection to experimental setup](scripts_docs/Connection_to_setup.md):
 - Arduino;
