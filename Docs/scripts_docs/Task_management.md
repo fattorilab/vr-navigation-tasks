@@ -1,6 +1,6 @@
 ## Task management
 
-The following scripts manage the parameters and options of the task, the behaviour of the player (specifically, its motion).
+The following scripts manage the parameters and options of the task, and the behaviour of the player (specifically, its motion).
 
 For the general list: [beam me up, Scotty!](../README.md)
 
