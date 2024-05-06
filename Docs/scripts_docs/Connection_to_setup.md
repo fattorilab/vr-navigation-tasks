@@ -87,6 +87,8 @@ Moreover this scripts provide the methods to:
 
 ```
 
+</details>
+
 **Ardu.cs depends on**:
 - arduino.cs - to establish connection with the serial port, and send/receive signals.
 
