@@ -9,8 +9,6 @@ For the general list: [beam me up, Scotty!](../README.md)
 Saves session data, in particular frame-by-frame and objects-specific data. 
 First, sets the path for saving (MEF name and path received from [MainTask](https://github.com/fattorilab/vr-navigation-tasks/blob/main/Docs/scripts_docs/Task_management.md#maintaskcs)), and fetches the ID of the last session from the database (see InteractWithDB.cs).
 
-For the general list: [beam me up, Scotty!](../README.md)
-
   <details> 
   <summary>Inspect code</summary>
   
