@@ -1,5 +1,9 @@
 ## Data saving
 
+The following scripts provide and call the methods for saving session-specific data and adding an entry to the database.
+
+For the general list: [beam me up, Scotty!](../README.md)
+
 ### Saver.cs
 
 Saves session data, in particular frame-by-frame and objects-specific data. 
@@ -93,4 +97,80 @@ To add parameters of another script, modify the region `Add recording to the DB`
 
 When closing the session, the user is prompted to confirm the saving of the data structures through popups (the answer to whom is also used by the [Video_recording](https://github.com/fattorilab/vr-navigation-tasks/blob/main/Docs/scripts_docs/Video_recording.md) scripts for the same purpose).
 
+**Saver depends on**:
+- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO;
+
 ### InteractWithDB.cs
+
+Provides methods used to:
+
+- connect to the database and fetch the ID of the last session;
+  <details> 
+    <summary>Inspect code</summary>
+    
+    ```c#
+    public int GetLastIDfromDB(string path_to_DB)
+    {
+
+        int lastID = -1; // Initialize lastID with a default value in case no records are found
+
+        Debug.Log($"Connecting to DB (DB_filepath={path_to_DB}) to READ LAST ID");
+        conn = "URI=file:" + path_to_DB;
+
+        using (dbconn = new SqliteConnection(conn))
+        {
+            dbconn.Open();
+
+            dbcmd = dbconn.CreateCommand();
+            sqlQuery = "SELECT * FROM Recordings ORDER BY ID DESC LIMIT 1;";
+            dbcmd.CommandText = sqlQuery;
+
+            dbreader = dbcmd.ExecuteReader();
+
+            // Check if there's a record in the result
+            if (dbreader.Read())
+            {
+                // Get the value of "ID" from the current record
+                lastID = dbreader.GetInt32(dbreader.GetOrdinal("ID"));
+            }
+
+            dbreader.Close();
+            dbconn.Close();
+
+            // Return the lastID value
+            Debug.Log("Last ID from DB " + lastID);
+            return lastID;
+        }
+    }
+    ```
+  </details>
+
+- Add an entry to the database;
+  <details> 
+    <summary>Inspect code</summary>
+    
+    ```c#
+    public void AddRecording(string path_to_DB, int new_ID, string new_Date, string new_Task, string new_Param)
+    {
+        Debug.Log("Connecting to DB " + $"DB_filepath={path_to_DB} to ADD NEW RECORDING");
+        conn = "URI=file:" + path_to_DB;
+
+        using (dbconn = new SqliteConnection(conn))
+        {
+            dbconn.Open();
+
+            dbcmd = dbconn.CreateCommand();
+            sqlQuery = "INSERT INTO Recordings (ID, Date, Task, Param) VALUES ('" + new_ID + "','" +  new_Date + "','" + new_Task + "','" + new_Param + "')";
+            dbcmd.CommandText = sqlQuery;
+
+            dbcmd.ExecuteNonQuery();
+
+            dbconn.Close();
+
+            Debug.Log("New rec. added to DB with ID " + new_ID);
+        }
+    }
+    ```
+  </details>
+
+
