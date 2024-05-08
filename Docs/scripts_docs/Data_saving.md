@@ -75,5 +75,19 @@ Then saves the info in two separate CSV files:
   </details>
 
 Finally, the script saves all public fields from MainTask (and optionally from any other script, e.g Movement.cs, provided modifications to the code) into a JSON structure then saved as entry to the database.
+To add parameters of another script, modify the region `Add recording to the DB` (within the method `saveAllData()`), specifically:
+
+  <details> 
+  <summary>inspect code</summary>
+    
+  ```c#
+      // Get parameters from public fields of main and movement
+      string jsonMainTask = JsonUtility.ToJson(main, true);
+      string jsonMovement = JsonUtility.ToJson(player.GetComponent<Movement>(), true);
+      string new_Param = "{ \"MainTask script params\": " + jsonMainTask
+          + ", \"Movement params\": " + jsonMovement + " }";
+  ```
+  </details>
+
 
 ### InteractWithDB.cs
