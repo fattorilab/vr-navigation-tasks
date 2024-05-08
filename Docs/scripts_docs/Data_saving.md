@@ -78,7 +78,7 @@ Finally, the script saves all public fields from MainTask (and optionally from a
 To add parameters of another script, modify the region `Add recording to the DB` (within the method `saveAllData()`), specifically:
 
   <details> 
-  <summary>inspect code</summary>
+  <summary>Inspect code</summary>
     
   ```c#
       // Get parameters from public fields of main and movement
@@ -89,5 +89,6 @@ To add parameters of another script, modify the region `Add recording to the DB`
   ```
   </details>
 
+When closing the session, the user is prompted to confirm the saving of the data structures through popups (the answer to whom is also used by the [Video_recording](https://github.com/fattorilab/vr-navigation-tasks/blob/main/Docs/scripts_docs/Video_recording.md) scripts for the same purpose).
 
 ### InteractWithDB.cs
