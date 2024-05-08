@@ -104,7 +104,7 @@ When closing the session, the user is prompted to confirm the saving of the data
 
 Provides methods used to:
 
-- connect to the database and fetch the ID of the last session;
+- Connect to the database and fetch the ID of the last session;
   <details> 
     <summary>Inspect code</summary>
     
@@ -145,7 +145,7 @@ Provides methods used to:
     ```
   </details>
 
-- Add an entry to the database;
+- Add an entry to the database.
   <details> 
     <summary>Inspect code</summary>
     
