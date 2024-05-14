@@ -43,11 +43,11 @@ This script creates the video frame-by-frame: it estimates the time elapsed (i.e
 
 To simplify the syncing of video and task data for tracking of events, player and eye movements, a frame-by-frame CSV file is produced here.
 The CSV file has a row per each frame, except the header. 
-The variable `Current_state` refers to `last_state` of the MainTask script, that is the same `Current_state` recorded by the saver (to know [why]()). (This is due to the fact that, when changing state, `current_state` is updated to the next state value at the end of the current state, e.g passing from 0 to 1, current_state becomes 1, during the end of state 0. This is because `current_state` is used to shift between states. On the other hand, the variable `last_state` updates to 1 only at the beginning of state 1, therefore it is in sync with the state-machine.)
+The variable `Current_state` refers to `last_state` of the MainTask script, that is the same `Current_state` recorded by the saver (to know whey, check [Notice](#Notice)). (This is due to the fact that, when changing state, `current_state` is updated to the next state value at the end of the current state, e.g passing from 0 to 1, current_state becomes 1, during the end of state 0. This is because `current_state` is used to shift between states. On the other hand, the variable `last_state` updates to 1 only at the beginning of state 1, therefore it is in sync with the state-machine.)
 
 The files nomenclature is the following:
-- video, `yyyy_mm_dd_IDXX_Main Camera`
-- timestamps, `yyyy_mm_dd_IDXX_Main Camera_recorderFrames`
+- video, `yyyy_mm_dd_IDxxx_Main Camera`
+- timestamps, `yyyy_mm_dd_IDxxx_Main Camera_recorderFrames`
 
 <details> 
 <summary>Inspect code</summary>
