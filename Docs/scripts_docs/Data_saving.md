@@ -100,7 +100,8 @@ To add parameters of another script, modify the region `Add recording to the DB`
 When closing the session, the user is prompted to confirm the saving of the data structures through popups (the answer to whom is also used by the [Video_recording](https://github.com/fattorilab/vr-navigation-tasks/blob/main/Docs/scripts_docs/Video_recording.md) scripts for the same purpose).
 
 **Saver depends on**:
-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO;
+- MainTask.cs - to get output path info;
+- InteractWithDB.cs - to get the most recent session ID from database, and log the current session.
 
 ### InteractWithDB.cs
 
