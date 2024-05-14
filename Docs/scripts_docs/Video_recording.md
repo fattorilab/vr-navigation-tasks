@@ -9,6 +9,9 @@ For the general list: [beam me up, Scotty!](../README.md)
 
 ### FFmpegSession.cs
 
+Defines the recording session, and thereby the recording info. 
+The code is modified such that the plugin uses a custom output path.
+
 <details> 
 <summary>Inspect code</summary>
   
@@ -101,7 +104,7 @@ private void addRecorderFrameRow(long main_start_time, int reward_count, int las
 ```
 </details>
 
-At the end of application, a popup prompts the user to decide either to save the video (and related timestamps) or to delete it.
+At the end of application, a popup prompts the user to decide whether to save the video (and related timestamps) or to delete it.
 
 <details> 
 <summary>Inspect code</summary>
@@ -132,5 +135,4 @@ if (_isStreamWriterInitialized)
 #endregion
 ```
 </details>
-
 
