@@ -58,7 +58,7 @@ Then saves the info in two separate CSV files:
 - frame-by-frame data, recorded at each `LateUpdate` and stacked in a list then saved into a CSV file, named `yyyy_mm_dd_IDxxxdata`;
   <details> 
     <summary>List of saved vars</summary>
-    
+
     ```c#
       string general_vars = "Unity_timestamp; Frame; ";
       string task_general_vars = "Trial; Correct Trials; Current_condition; Current_state; Error_type; Reward_count; ";
@@ -67,6 +67,10 @@ Then saves the info in two separate CSV files:
       string eyes_vars = "pupil_timestamp; px_eye_right; py_eye_right; px_eye_left; py_eye_left; " +
                               "eye_diameter_left; eye_diameter_right";
     ```
+
+<a name="Notice">**Notice**</a>: Current_state refers to the variable `last_state` of the MainTask, even though there is a `current_state` defined. This is due to the fact that, when changing state, `current_state` is updated to the next state value at the end of the current state, e.g passing from 0 to 1, current_state becomes 1, during the end of state 0. This is because `current_state` is used to shift between states. On the other hand, the variable `last_state` updates to 1 only at the beginning of state 1, therefore it is in sync with the state-machine.)
+  
+
   </details>
   
 - objects data, recorded at the time of object appearance/disappearance by the script that instantiates/activates/deactivates the object (search for `addObject` and `addObjectEnd` in MainTask.cs, CreateTrees.cs), and stacked in a list then saved to a CSV file, named `yyyy_mm_dd_IDxxxsupplement`;
