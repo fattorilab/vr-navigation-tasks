@@ -251,7 +251,8 @@ Finally, it allows restriction of movement in a given direction (e.g. to make th
     #endregion
 ```
 
-<details>
+</details>
+
 
 **Movement depends on**:
 - Ardu.cs - to receive joystick data;
