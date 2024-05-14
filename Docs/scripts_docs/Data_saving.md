@@ -68,7 +68,7 @@ Then saves the info in two separate CSV files:
                               "eye_diameter_left; eye_diameter_right";
     ```
 
-<a name="Notice">**Notice**</a>: Current_state refers to the variable `last_state` of the MainTask, even though there is a `current_state` defined. This is due to the fact that, when changing state, `current_state` is updated to the next state value at the end of the current state, e.g passing from 0 to 1, current_state becomes 1, during the end of state 0. This is because `current_state` is used to shift between states. On the other hand, the variable `last_state` updates to 1 only at the beginning of state 1, therefore it is in sync with the state-machine.)
+    [Notice](#notice-last_state): Current_state refers to the variable `last_state` of the MainTask, even though there is a `current_state` defined. This is due to the fact that, when changing state, `current_state` is updated to the next state value at the end of the current state, e.g passing from 0 to 1, current_state becomes 1, during the end of state 0. This is because `current_state` is used to shift between states. On the other hand, the variable `last_state` updates to 1 only at the beginning of state 1, therefore it is in sync with the state-machine.)
   
 
   </details>
