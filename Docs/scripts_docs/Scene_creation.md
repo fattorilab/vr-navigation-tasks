@@ -64,7 +64,7 @@ In the `Update()`, the methods for swapping the ground are called whenever a cer
         if (player.transform.localPosition.x > midX + 25 || player.transform.localPosition.x < midX - 25 ||
             player.transform.localPosition.z > midZ + 25 || player.transform.localPosition.z < midZ - 25)
         {
-            // 25 to 40
+            // Changing the value 40 in midX/midZ +/- 40, will increase/decrease the area beyond which the trigger is caused
             if (player.transform.localPosition.x > midX + 40) { midX += 50; SwapRight(); }
             if (player.transform.localPosition.x < midX - 40) { midX -= 50; SwapLeft(); }
             if (player.transform.localPosition.z > midZ + 40) { midZ += 50; SwapForward(); }
