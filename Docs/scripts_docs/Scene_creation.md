@@ -73,9 +73,55 @@ In the `Update()`, the methods for swapping the ground are called whenever a cer
         }
 
     }
+
 ```
   
 </details>
+
+### SomeGreenery
+
+Instantiates (active and visible) bushes and mushrooms with a random disposition within the ground area that has this script as component (see `SwapForward()`, above). 
+
+<details>
+<summary>Inspect code</summary>
+    
+```c#
+
+    public void createGreenery()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            createOneObject(bush1);
+            createOneObject(bush2);
+            createOneObject(bush3);
+            createOneObject(bush4);
+            createOneObject(bush5);
+
+            createOneObject(mushroom1);
+            createOneObject(mushroom2);
+            createOneObject(mushroom3);
+        }
+    }
+
+    void createOneObject(GameObject Prefab)
+    {
+        Vector3 pos = new Vector3(Random.Range(-25f, 25f), 0, Random.Range(-25f, 25f));
+
+        Instantiate(Prefab, pos, Quaternion.Euler(0, Random.Range(-180f, 180f), 0), transform);
+    }
+
+    public void deleteGreenery()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+```
+  
+</details>
+
+
 
 ### Createtargetsandtrees
 
