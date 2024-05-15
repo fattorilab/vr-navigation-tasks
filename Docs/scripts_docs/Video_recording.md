@@ -46,7 +46,7 @@ This script creates the video frame-by-frame: it estimates the time elapsed (i.e
 
 To simplify the syncing of video and task data for tracking of events, player and eye movements, a frame-by-frame CSV file is produced here.
 The CSV file has a row per each frame, except the header. 
-The variable `Current_state` refers to `last_state` of the MainTask script, that is the same `Current_state` recorded by the Saver (to know why, check[here](https://github.com/fattorilab/vr-navigation-tasks/blob/main/Docs/scripts_docs/Data_saving.md#notice-last_state)).
+The variable `Current_state` refers to `last_state` of the MainTask script, that is the same `Current_state` recorded by the Saver (to know why, check [here](https://github.com/fattorilab/vr-navigation-tasks/blob/main/Docs/scripts_docs/Data_saving.md#notice-last_state)).
 
 The files nomenclature is the following:
 - video, `yyyy_mm_dd_IDxxx_Main Camera`
