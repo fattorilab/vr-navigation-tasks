@@ -80,7 +80,7 @@ In the `Update()`, the methods for swapping the ground are called whenever a cer
 
 ### SomeGreenery
 
-Instantiates (active and visible) bushes and mushrooms with a random disposition within the ground area that has this script as component (see `SwapForward()`, above). 
+Instantiates (active and visible) bushes and mushrooms with a random disposition within the ground area gameObject that has this script as component (see `SwapForward()`, above). 
 
 <details>
 <summary>Inspect code</summary>
