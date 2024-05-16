@@ -79,12 +79,15 @@ In the `Update()`, the methods for swapping the ground are called whenever a cer
     }
 
 ```
+
+**Ground depends on**:
+- Createtargetsandtrees.cs - during the ground swap, to delete the trees on the ground areas being removed and to create them on the ground areas being added to the scene.
   
 </details>
 
 ### SomeGreenery
 
-Instantiates (active and visible) bushes and mushrooms with a random disposition within the ground area (gameObject) that has this script as component. It also provides a method to delete the objects it created.
+On application start, instantiates (active and visible) bushes and mushrooms with a random disposition within the ground area (gameObject) that has this script as component. It also provides a method to delete the objects it created.
 
 <details>
 <summary>Inspect code</summary>
@@ -126,10 +129,96 @@ Instantiates (active and visible) bushes and mushrooms with a random disposition
 </details>
 
 
-
 ### Createtargetsandtrees
 
-Instantiates (active and visible) a set of trees with a random disposition within the ground area (gameObject) that has this script as component. It also provides a method to delete the objects it created.
+On application start, instantiates (active and visible) a set of trees with a random disposition within the ground area (gameObject) that has this script as component. It also provides a method to delete the objects it created.
+
+<details>
+<summary>Inspect code</summary>
+    
+```c#
+public void createGreenery()
+{
+
+    for (int i = 0; i < 2; i++) // here, 48 tree + 8 target obj (commented out)
+    {
+        createAndSaveObject(tree1, "Obstacle"); 
+        createAndSaveObject(tree2, "Obstacle"); 
+        createAndSaveObject(tree3, "Obstacle"); 
+        createAndSaveObject(tree1, "Obstacle"); 
+        createAndSaveObject(tree2, "Obstacle"); 
+        createAndSaveObject(tree3, "Obstacle"); 
+
+        createAndSaveObject(tree1, "Obstacle"); 
+        createAndSaveObject(tree2, "Obstacle"); 
+        createAndSaveObject(tree3, "Obstacle"); 
+        createAndSaveObject(tree1, "Obstacle"); 
+        createAndSaveObject(tree2, "Obstacle"); 
+        createAndSaveObject(tree3, "Obstacle"); 
+
+        createAndSaveObject(tree1, "Obstacle"); 
+        createAndSaveObject(tree2, "Obstacle"); 
+        createAndSaveObject(tree3, "Obstacle"); 
+        createAndSaveObject(tree1, "Obstacle"); 
+        createAndSaveObject(tree2, "Obstacle"); 
+        createAndSaveObject(tree3, "Obstacle"); 
+
+        createAndSaveObject(tree1, "Obstacle"); 
+        createAndSaveObject(tree2, "Obstacle"); 
+        createAndSaveObject(tree3, "Obstacle"); 
+        createAndSaveObject(tree1, "Obstacle"); 
+        createAndSaveObject(tree2, "Obstacle"); 
+        createAndSaveObject(tree3, "Obstacle");
+
+        /*createAndSaveObject(lowlevel, "LowTarget");
+        createAndSaveObject(midlevel, "MidTarget");
+        createAndSaveObject(highlevel, "HighTarget");
+        createAndSaveObject(doubleobject, "DoubleTarget");*/
+    }
+
+}
+
+
+void createAndSaveObject(GameObject Prefab, string type)
+{
+    Vector3 pos = new Vector3(UnityEngine.Random.Range(-25f, 25f), 0, UnityEngine.Random.Range(-25f, 25f));
+    GameObject newObject = Instantiate(Prefab, transform.position + pos, Quaternion.Euler(0, UnityEngine.Random.Range(-180f, 180f), 0), transform);
+    newObject.tag = type;
+
+    Vector3 position = newObject.transform.position;
+    Vector3 rotation = newObject.transform.eulerAngles;
+    Vector3 scale = newObject.transform.localScale;
+
+    saver.addObject(
+        newObject.GetInstanceID().ToString(),
+        type,
+        position[0],
+        position[1],
+        position[2],
+        rotation[0],
+        rotation[1],
+        rotation[2],
+        scale[0],
+        scale[1],
+        scale[2]
+        );
+}
+
+public void deleteGreenery()
+{
+    foreach (Transform child in transform)
+    {
+        if (child.name != "Ground")
+        {
+            saver.addObjectEnd(child.GetInstanceID().ToString());
+            Destroy(child.gameObject);
+        }
+    }
+}
+
+```
+  
+</details>
 
 
 ### Rocks
