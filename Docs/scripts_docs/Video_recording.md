@@ -1,7 +1,7 @@
 ## Video recording
 
 Video recording exploits the Unity plugin [FFmpegOUT](https://github.com/keijiro/FFmpegOut?tab=readme-ov-file#installation) by [keijiro](https://github.com/keijiro). 
-Two scripts () where customly modified to satisfy our requirements, including control over video saving and tracking of video timestamps.
+Two scripts (FFmpegSession.cs and CameraCapture.cs) where customly modified to satisfy our requirements, including control over video saving and tracking of video timestamps.
 Those scripts are located in `Assets/FFmpegOUT/Runtime`.
 The modifications are reported below.
 
