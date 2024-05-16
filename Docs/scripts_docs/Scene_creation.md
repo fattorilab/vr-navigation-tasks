@@ -226,4 +226,5 @@ public void deleteGreenery()
 
 ### Rocks
 
+Specific to task with obstacles ()
 
