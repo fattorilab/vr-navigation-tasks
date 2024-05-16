@@ -2,7 +2,7 @@
 
 The scripts here below are used to instantiate/delete the scene, in particular to create a naturalistic environment composed of a green ground with trees at (reachable) distance:
 
-[<img src="Docs/img/plain_forest.png" width="250"/>](plain_forest.png)
+[<img src="../img/plain_forest.jpg" width="250"/>](plain_forest.jpg)
 
 For the general list: [beam me up, Scotty!](../README.md)
 
