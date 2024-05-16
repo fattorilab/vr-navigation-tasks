@@ -1,6 +1,6 @@
 # vr-navigation-tasks
 
-[<img src="Docs/img/monkey_researcher_little.jpg" width="250"/>](little_mef)
+[<img src="Docs/img/monkey_researcher_little.jpg" width="350"/>](little_mef)
 
 Super repository containg all VR tasks, and the relative documentation.
 
