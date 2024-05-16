@@ -1,8 +1,10 @@
 # vr-navigation-tasks
 
+[<img src="Docs/img/monkey_researcher_little.jpg" width="250"/>](little_mef)
+
 Super repository containg all VR tasks, and the relative documentation.
 
-It contains Virtual Reality (VR) tasks built to test 3D goal-directed navigation. The tasks projects are built and run on Unity (version: 2022.3.20f1).
+It contains Virtual Reality (VR) tasks designed to test 3D goal-directed navigation. The tasks projects are built and run on Unity (version: 2022.3.20f1).
 Each project is a state-machine (thereby, the logic is coherent) and represents a different task.
 
 These VR projects expects:
@@ -74,4 +76,4 @@ git push origin main
 
 ## Documentation
 
-Since each task share a standard structure, a general [documentation](https://linktodocumentation) is provided for the C# scripts managing and supporting data saving, video recording and interfacing with the experimental setup (e.g. arduino, Pupil Lab).
+Since each task shares a standard structure, a general [documentation](https://linktodocumentation) is provided for the C# scripts managing and supporting data saving, video recording and interfacing with the experimental setup (e.g. arduino, Pupil Lab).
