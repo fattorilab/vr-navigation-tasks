@@ -1,5 +1,9 @@
 ## Scene creation
 
+The scripts here below are used to instantiate/delete the scene, in particular to create a naturalistic environment composed of a green ground with trees at (reachable) distance.
+
+[]()
+
 For the general list: [beam me up, Scotty!](../README.md)
 
 ### Ground
@@ -80,7 +84,7 @@ In the `Update()`, the methods for swapping the ground are called whenever a cer
 
 ### SomeGreenery
 
-Instantiates (active and visible) bushes and mushrooms with a random disposition within the ground area gameObject that has this script as component (see `SwapForward()`, above). 
+Instantiates (active and visible) bushes and mushrooms with a random disposition within the ground area (gameObject) that has this script as component. It also provides a method to delete the objects it created.
 
 <details>
 <summary>Inspect code</summary>
@@ -124,5 +128,8 @@ Instantiates (active and visible) bushes and mushrooms with a random disposition
 
 
 ### Createtargetsandtrees
+
+Instantiates (active and visible) a set of trees with a random disposition within the ground area (gameObject) that has this script as component. It also provides a method to delete the objects it created.
+
 
 ### Rocks
