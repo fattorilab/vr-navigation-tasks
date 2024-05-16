@@ -25,7 +25,7 @@ Per each session, a set of files are given in output:
 - recorded screen videos + videos timestamps;
 - frame data, including player movement data, eye data, etc;
 - objects data, including timestamp of appearance/disappearance.
-- 
+  
 At present, the available tasks are:
 
 - [Fixation task](https://github.com/fattorilab/Fixation_3D_Task);
@@ -76,4 +76,4 @@ git push origin main
 
 ## Documentation
 
-Since each task shares a standard structure, a general [documentation](https://linktodocumentation) is provided for the C# scripts managing and supporting data saving, video recording and interfacing with the experimental setup (e.g. arduino, Pupil Lab).
+Since each task shares a standard structure, a general [documentation]([https://linktodocumentation](https://github.com/fattorilab/vr-navigation-tasks/tree/main/Docs)) is provided for the C# scripts managing and supporting data saving, video recording and interfacing with the experimental setup (e.g. arduino, Pupil Lab).
