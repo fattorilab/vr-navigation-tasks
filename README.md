@@ -76,4 +76,4 @@ git push origin main
 
 ## Documentation
 
-Since each task shares a standard structure, a general [documentation]([https://linktodocumentation](https://github.com/fattorilab/vr-navigation-tasks/tree/main/Docs)) is provided for the C# scripts managing and supporting data saving, video recording and interfacing with the experimental setup (e.g. arduino, Pupil Lab).
+Since each task shares a standard structure, a general [documentation](https://github.com/fattorilab/vr-navigation-tasks/tree/main/Docs) is provided for the C# scripts managing and supporting data saving, video recording and interfacing with the experimental setup (e.g. arduino, Pupil Lab).
