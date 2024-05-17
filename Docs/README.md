@@ -25,7 +25,7 @@ Here is provided a basic Documentation for the project scripts
 - Createtargetsandtrees;
 - Rock/Rocks;
 
-[Supplementary](scripts_docs/Supplementary.md):
+[Utilities](scripts_docs/Utilities.md):
 - SetEditor;
 - VirtualReality;
 
