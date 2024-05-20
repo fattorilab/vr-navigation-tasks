@@ -23,7 +23,7 @@ Here is provided a basic Documentation for the project scripts
 - Ground;
 - SomeGreenery;
 - Createtargetsandtrees;
-- Rock/Rocks;
+- Rocks;
 
 [Utilities](scripts_docs/Utilities.md):
 - SetEditor;
