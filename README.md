@@ -34,7 +34,7 @@ At present, the available tasks are:
 - Trial structure task - [Many obstacles](https://github.com/fattorilab/Trial_Structure_many_obstacles_Task);
 - Trial structure task - [Many obstacles eat all](https://github.com/fattorilab/Trial_Structure_many_obstacles_eatAll_Task);
 
-See task_design.pdf for details on the design of each task.
+See [task_design.pdf](./Docs/task_design.pdf) for details on the design of each task.
 
 ## Get this repo and ready to use
 
